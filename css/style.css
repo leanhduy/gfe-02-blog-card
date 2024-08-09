@@ -18,11 +18,14 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
   font-size: 16px;
   background-image: var(--bg-image-color);
+  min-height: 100vh;
 }
 
 body {
@@ -30,19 +33,16 @@ body {
   font-family: "Noto Sans", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
-  min-height: 100vh;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  min-height: 100vh;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+main {
+  min-height: 100vh;
 }
-
 
 a,
 a:active,
@@ -64,10 +64,10 @@ a:focus {
 
 .credits {
   color: #777;
-  position: fixed;
-  bottom: 24px;
-  left: 24px;
-  font-size: 11px;
+  position: sticky;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  font-size: 0.6875rem;
   text-align: center;
 }
 
@@ -82,7 +82,7 @@ a:focus {
   border-radius: 8px;
   display: flex;
   flex-direction: column;
-  margin: 7.5rem auto;
+  margin: 7.5rem auto 0;
   width: 340px;
   row-gap: 1.5rem;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
@@ -91,13 +91,18 @@ a:focus {
 
 .blog-header {
   height: 288px;
+  width: 100%;
+  position: relative;
 }
 
 .blog-header img {
   border-radius: 8px 8px 0 0;
-  object-fit: fill;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .blog-body {
@@ -109,7 +114,7 @@ a:focus {
   font-weight: 400;
   font-size: .875rem;
   color: var(--green-base);
-  line-height: 1.25rem;
+  line-height: var(--lineheight-base);
   padding: 2px 8px;
   border: 1px solid var(--green-light);
   border-radius: 20px;
@@ -118,7 +123,7 @@ a:focus {
 
 .blog-title {
   font-size: var(--text-lg);
-  line-height: 1.75rem;
+  line-height: var(--lineheight-lg);
   margin-top: .5rem;
   font-weight: 600;
   color: var(--pr imary);
@@ -126,9 +131,9 @@ a:focus {
 
 .blog-description {
   font-size: var(--text-base);
-  line-height: 1.5rem;
+  line-height: var(--lineheight-base);
   margin-top: .75rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--secondary);
 }
 
@@ -136,6 +141,7 @@ a:focus {
   padding: 0 1rem;
   margin-bottom: 1rem;
   width: 100%;
+  margin-bottom: 1.5rem;
 }
 
 .link {
@@ -147,8 +153,9 @@ a:focus {
 
 .link span {
   font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: var(--text-base);
+  line-height: var(--lineheight-lg);
+  padding: 0 2px;
 }
 
 .link img {
