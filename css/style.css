@@ -1,5 +1,30 @@
 /* Put any custom CSS styles here.  */
 /* Be sure to delete the <style> tag in index.html if you want to use this stylesheet. */
+:root {
+  --primary: #171717;
+  --secondary: #525252;
+  --indigo: #4338CA;
+  --indigo-light: #E9EAFC;
+  --green-base: #15803D;
+  --green-light: #BBF7D0;
+  --green-lighter: #F0FDF4;
+  --bg-image-color: linear-gradient(#F9FAFB, #D2D6DB);
+  --bg-white: #FFFFFF;
+  --text-base: 1rem;
+  --lineheight-base: 1.5rem;
+  --text-lg: 1.125rem;
+  --lineheight-lg: 1.75rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  background-image: var(--bg-image-color);
+}
+
 body {
   margin: 0;
   font-family: "Noto Sans", system-ui, -apple-system, BlinkMacSystemFont,
@@ -13,7 +38,28 @@ body {
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+
+a,
+a:active,
+a:hover,
+a:focus {
+  color: var(--indigo);
+}
+
+a {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-decoration: none;
+}
+
+a:focus {
+  border: 4px solid var(--indigo-light);
+  border-radius: 4px;
 }
 
 .credits {
@@ -28,4 +74,86 @@ body {
 .credits a {
   color: #000;
   font-weight: bold;
+}
+
+/* CSS - MY SOLUTIONS */
+.blog-card {
+  background-color: var(--bg-white);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  margin: 7.5rem auto;
+  width: 340px;
+  row-gap: 1.5rem;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.blog-header {
+  height: 288px;
+}
+
+.blog-header img {
+  border-radius: 8px 8px 0 0;
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+}
+
+.blog-body {
+  row-gap: .75rem;
+  padding: 0 1rem;
+}
+
+.blog-category {
+  font-weight: 400;
+  font-size: .875rem;
+  color: var(--green-base);
+  line-height: 1.25rem;
+  padding: 2px 8px;
+  border: 1px solid var(--green-light);
+  border-radius: 20px;
+  background-color: var(--green-lighter);
+}
+
+.blog-title {
+  font-size: var(--text-lg);
+  line-height: 1.75rem;
+  margin-top: .5rem;
+  font-weight: 600;
+  color: var(--pr imary);
+}
+
+.blog-description {
+  font-size: var(--text-base);
+  line-height: 1.5rem;
+  margin-top: .75rem;
+  font-weight: 600;
+  color: var(--secondary);
+}
+
+.footer {
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.link {
+  align-items: center;
+  display: inline-flex;
+  flex-direction: row;
+  column-gap: .375rem;
+}
+
+.link span {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.link img {
+  color: var(--indigo);
+  width: 20px;
+  height: 20px;
+  padding: 3.33px 3.52px;
 }
