@@ -111,14 +111,19 @@ a:focus {
 }
 
 .blog-category {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 30px;
+  background-color: var(--green-lighter);
+  border: 1px solid var(--green-light);
+}
+
+.blog-category span {
   font-weight: 400;
   font-size: .875rem;
   color: var(--green-base);
   line-height: 1.25rem;
-  padding: 1px 7px;
-  border: 1px solid var(--green-light);
-  border-radius: 30px;
-  background-color: var(--green-lighter);
+  margin: 1px 8px;
 }
 
 .blog-title {
@@ -126,7 +131,7 @@ a:focus {
   line-height: var(--lineheight-lg);
   margin-top: 8px;
   font-weight: 600;
-  color: var(--pr imary);
+  color: var(--primary);
 }
 
 .blog-description {
